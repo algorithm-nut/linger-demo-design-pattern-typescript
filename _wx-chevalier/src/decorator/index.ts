@@ -1,7 +1,9 @@
+// 接口
 export interface Component {
   operation(): void;
 }
 
+// 
 export class ConcreteComponent implements Component {
   private s: String;
 
@@ -33,10 +35,12 @@ export class Decorator implements Component {
 
   public operation(): void {
     console.log('`operation` of Decorator', this.id, ' is being called!');
+    // 调用被包装组件的方法，但是保持一致的接口
     this.component.operation();
   }
 }
 
+// 继承实现包装??
 export class ConcreteDecorator extends Decorator {
   constructor(id: Number, component: Component) {
     super(id, component);
@@ -44,6 +48,7 @@ export class ConcreteDecorator extends Decorator {
 
   public operation(): void {
     super.operation();
+    
     console.log(
       '`operation` of ConcreteDecorator',
       this.Id,

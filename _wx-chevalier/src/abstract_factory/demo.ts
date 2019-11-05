@@ -14,3 +14,9 @@ tester1.test();
 const factory2: AbstractFactory = new ConcreteFactory2();
 const tester2: Tester = new Tester(factory2);
 tester2.test();
+
+// 输出类型 =============
+// This is methodA of ProductA1
+// 1
+// This is methodA of ProductA2
+// 2

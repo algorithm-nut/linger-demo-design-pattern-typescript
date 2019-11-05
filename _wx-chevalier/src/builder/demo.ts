@@ -7,3 +7,6 @@ const u: User = new UserBuilder('Jancsi')
   .build();
 
 console.log(u.Name + ' ' + u.Age + ' ' + u.Phone + ' ' + u.Address);
+
+// 输出结果 ================
+// Jancsi 12 0123456789 asdf

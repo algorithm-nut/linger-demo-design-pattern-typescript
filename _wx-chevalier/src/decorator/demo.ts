@@ -6,3 +6,8 @@ const decorator1: Decorator = new ConcreteDecorator(
 );
 
 decorator1.operation();
+
+// console ============= 
+// `operation` of Decorator 1  is being called!
+// `operation` of ConcreteComponent Comp1  is being called!
+// `operation` of ConcreteDecorator 1  is being called!

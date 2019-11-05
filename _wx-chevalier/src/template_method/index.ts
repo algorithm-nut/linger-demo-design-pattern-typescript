@@ -11,6 +11,7 @@ export class AbstractClass {
     throw new Error('Abstract Method');
   }
 
+
   public templateMethod(): void {
     console.log('templateMethod is being called');
     this.method1();

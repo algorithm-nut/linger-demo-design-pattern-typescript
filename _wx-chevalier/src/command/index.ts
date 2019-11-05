@@ -32,6 +32,7 @@ export class ConcreteCommand2 extends Command {
   }
 }
 
+// 调用者
 export class Invoker {
   private commands: Command[];
 
