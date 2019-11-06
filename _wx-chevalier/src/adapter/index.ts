@@ -9,6 +9,7 @@ export interface Target {
 }
 
 export class Adapter implements Target {
+  // method -> call
   public call(): void {
     console.log("Adapter's `call` method is being called");
     const adaptee: Adaptee = new Adaptee();

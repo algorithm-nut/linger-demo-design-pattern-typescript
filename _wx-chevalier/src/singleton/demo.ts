@@ -8,3 +8,6 @@ if (singleton1 === singleton2) {
 } else {
   console.log('two singletons are not equivalent');
 }
+
+// console ================
+// two singletons are equivalent

@@ -33,6 +33,7 @@ export class Concrete3 implements Prototype {
   }
 }
 
+// 创建者
 export class Builder {
   private prototypeMap: { [s: string]: Prototype } = {};
 

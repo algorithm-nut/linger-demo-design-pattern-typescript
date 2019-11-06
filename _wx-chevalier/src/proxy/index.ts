@@ -11,9 +11,12 @@ export class Proxy implements Subject {
   }
 
   public doAction(): void {
+    // 代理类事件
     console.log('`doAction` of Proxy(', this.s, ')');
+    
     if (this.realSubject === null || this.realSubject === undefined) {
       console.log('creating a new RealSubject.');
+      // 调用实际对象
       this.realSubject = new RealSubject(this.s);
     }
     this.realSubject.doAction();

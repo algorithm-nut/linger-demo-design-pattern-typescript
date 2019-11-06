@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<div id="hello"></div>
+
+<script>
+// Illegal invocation
+var getId = document.getElementById
+console.log(getId( 'div1' ))
+</script>  
+
+
+<script>
+// 修复一番
+document.getElementById = (function( func ){
+    return function() {
+        return func.apply(document, arguments);
+    }
+})( document.getElementById );
+
+var getId = document.getElementById;
+var div = getId( 'hello' );
+console.log(div)
+</script>
+
+</body>
+</html>

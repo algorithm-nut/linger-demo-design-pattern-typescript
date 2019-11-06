@@ -11,6 +11,7 @@ export class Handler {
   }
 
   public operation(msg: string, req: number): void {
+    // 传入的req不大于handler的req
     if (req <= this.req) {
       this.handlerRequest(msg);
     } else if (this.handler !== null && this.handler !== undefined) {
@@ -18,6 +19,7 @@ export class Handler {
     }
   }
 
+  // 子类必须实现这个方法
   public handlerRequest(msg: string): void {
     throw new Error('Abstract method!');
   }

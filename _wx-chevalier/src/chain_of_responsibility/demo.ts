@@ -18,9 +18,18 @@ h1 = new ConcreteHandler1(3);
 h2 = new ConcreteHandler2(7);
 h3 = new ConcreteHandler3(20);
 
+// 职责链
 h1.setHandler(h2);
 h2.setHandler(h3);
 
 for (i = 0, max = reqs.length; i < max; i += 1) {
   h1.operation('operation is fired!', reqs[i]);
 }
+
+// console =====================
+// Message (ConcreteHandler1) ::  operation is fired!
+// Message :: (ConcreteHandler2)  operation is fired!
+// Message :: (ConcreteHandler2)  operation is fired!
+// Message :: (ConcreteHandler2)  operation is fired!
+// Message :: (ConcreteHandler3)  operation is fired!
+// Message (ConcreteHandler1) ::  operation is fired!
